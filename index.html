@@ -1,11 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>ShahScape</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <h1>Hello World!</h1>
+    <nav>
+        <div class="logo">
+            <i class="fa-brands fa-quinscape"></i>
+            <h1>ShahScape</h1>
+        </div>
+
+        <ul>
+            <li>
+                <a href="#home">Home</a>
+            </li>
+            <li class="dropdown">
+                
+                <a href="#ourservices">Services</a>
+                <div class="dropdown-content">
+                    <a href="#">Software Services <i class="fa-solid fa-caret-right"></i></a>
+                    <a href="#">Hardware Services <i class="fa-solid fa-caret-right"></i></a>
+                    <a href="#">IT Consulting <i class="fa-solid fa-caret-right"></i></a>
+                    <a href="#">Networking Services <i class="fa-solid fa-caret-right"></i></a>
+                    <a href="#">Cloud Services <i class="fa-solid fa-caret-right"></i></a>
+                </div>
+            </li>
+            <li><a href="#Contact">Contact</a></li>
+            <li> <a href="#aboutus">About Us</a></li>
+        </ul>
+        <button>Sign Up</button>
+    </nav>
+
+    <div class="login-card" id="loginCard">
+        <form method="post" class="login-form" action="index.html">
+            <h2>Sign In</h2>
+            <input type="text" placeholder="Username" required />
+            <input type="password" placeholder="Password" required />
+            <div class="btn-grp">
+                <button type="button" class="cancel-btn" onclick="hideLoginCard()">
+                    Later
+                </button>
+
+                <button type="submit" class="login-btn">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <main class="hero-sec" id="home">
+        <section>
+            <div class="title-part">
+                <h2>
+                    Empowering Your Business <br />
+                    With Cutting-Edge <br />
+                    Tech Services.
+                </h2>
+
+                <button class="start">Get Started</button>
+            </div>
+
+            <div class="img-part">
+                <img src="img/pos1.jpg" alt="poster" height="450px" width="400px" />
+            </div>
+        </section>
+    </main>
+
+    <div class="it-company-section">
+        <div class="text-content">
+            <h2>About Our IT Services</h2>
+            <p>
+                We provide innovative tech solutions that drive business growth. Our
+                team of experts specializes in cutting-edge technologies to deliver
+                exceptional results.
+            </p>
+            <br />
+            <br />
+            <p>
+                ShahScape champions the fusion of advanced tech and business growth,
+                driven by innovation and a commitment to excellence. Their mission: to
+                make cutting-edge technology universally accessible, ensuring every
+                project exceeds expectations and intertwines success with
+                technological advancement.
+            </p>
+            <br />
+            <br />
+            <div class="features">
+                Innovation: We constantly seek cutting-edge solutions to stay ahead in
+                the tech industry. <br />
+                Integrity: Our commitment to honesty and transparency guides our
+                services and customer relationships. <br />
+                Excellence: We strive for the highest quality in every project,
+                ensuring satisfaction and success. <br />
+                Collaboration: We believe in the power of teamwork and partnership to
+                achieve collective goals. <br />
+                Customer Focus: Our client's needs and aspirations are at the heart of
+                our operations. <br />
+            </div>
+        </div>
+        <div class="image-content">
+            <img src="img/pos3.jpg" alt="IT Solutions" height="400px" />
+        </div>
+    </div>
+
+    <header>
+        <h2>Our Services</h2>
+    </header>
+
+    <section class="services-grid" id="ourservices">
+        <div class="service-item">
+            <i class="service-icon fa-solid fa-code"></i>
+            <h2 class="service-heading">Web Development</h2>
+            <p class="service-content">Building responsive and modern websites.</p>
+        </div>
+
+        <div class="service-item">
+            <i class="service-icon fa-solid fa-mobile-alt"></i>
+            <h2 class="service-heading">Mobile Apps</h2>
+            <p class="service-content">
+                Creating user-friendly mobile applications.
+            </p>
+        </div>
+
+        <div class="service-item">
+            <i class="service-icon fa-solid fa-cloud"></i>
+            <h2 class="service-heading">Cloud Services</h2>
+            <p class="service-content">Offering scalable cloud solutions.</p>
+        </div>
+
+        <div class="service-item">
+            <i class="service-icon fa-solid fa-network-wired"></i>
+            <h2 class="service-heading">Network Solutions</h2>
+            <p class="service-content">
+                Custom network infrastructure for your business needs.
+            </p>
+        </div>
+
+        <div class="service-item">
+            <i class="service-icon fa-solid fa-lock"></i>
+            <h2 class="service-heading">Cybersecurity</h2>
+            <p class="service-content">
+                Protecting your digital assets from cyber threats.
+            </p>
+        </div>
+
+        <div class="service-item">
+            <i class="service-icon fa-solid fa-database"></i>
+            <h2 class="service-heading">Data Management</h2>
+            <p class="service-content">
+                Efficient data storage, processing, and analysis solutions.
+            </p>
+        </div>
+
+        <div class="service-item">
+            <i class="service-icon fa-solid fa-robot"></i>
+            <h2 class="service-heading">Automation & AI</h2>
+            <p class="service-content">
+                Innovative AI-driven automation to streamline operations.
+            </p>
+        </div>
+
+        <div class="service-item">
+            <i class="service-icon fa-solid fa-chart-line"></i>
+            <h2 class="service-heading">Business Intelligence</h2>
+            <p class="service-content">
+                Actionable insights through advanced data analytics.
+            </p>
+        </div>
+
+        <div class="service-item">
+            <i class="service-icon fa-solid fa-tools"></i>
+            <h2 class="service-heading">IT Support</h2>
+            <p class="service-content">
+                Reliable and timely technical support services.
+            </p>
+        </div>
+    </section>
+
+    <div class="marquee">
+        <div class="marquee-content">
+          <img src="img/app-development.png" alt="Scrolling Image" height="100px" width="120px">
+          <img src="img/science_10303368.png" alt="Scrolling Image" height="100px" width="120px">
+          <img src="img/app-settings.png" alt="Scrolling Image" height="100px" width="120px">
+          <img src="img/database_16134034.png" alt="Scrolling Image" height="100px" width="120px">
+          <img src="img/folder.png" alt="Scrolling Image" height="100px" width="120px">
+          <img src="img/java_226777.png" alt="Scrolling Image" height="100px" width="120px">
+          <img src="img/app-development.png" alt="Scrolling Image" height="100px" width="120px">
+          <img src="img/science_10303368.png" alt="Scrolling Image" height="100px" width="120px">
+          <img src="img/app-settings.png" alt="Scrolling Image" height="100px" width="120px">
+          <img src="img/database_16134034.png" alt="Scrolling Image" height="100px" width="120px">
+          <img src="img/folder.png" alt="Scrolling Image" height="100px" width="120px">
+          <img src="img/java_226777.png" alt="Scrolling Image" height="100px" width="120px">
+
+        </div>
+      </div>
+
+
+    <section class="team">
+        <h1>Most Popular Services</h1>
+        <div class="services-section">
+
+            <div class="overlay" id="overlay" onclick="closeCard()"></div>
+
+            <div class="service">
+                <h2>Software Services</h2>
+                <p>
+                    We create responsive and modern websites that cater to your business
+                    needs.
+                </p>
+                <button class="option" onclick="openCard('Option 1')">View More</button>
+
+
+            </div>
+
+            <div class="card" id="card">
+                <p>
+                <ul>
+                    <li><b>Managed IT Services:</b> Continuous management, maintenance, and support of IT infrastructure and
+                        operations.
+                    </li>
+                    <li>
+                       <b> Cloud Services:</b> Scalable solutions like IaaS, PaaS, and SaaS for data storage and access.
+
+                    </li>
+                    <li>
+                        <b>IT Consulting: </b>Expert advice on IT strategy, infrastructure design, and technology deployment.
+                    </li>
+                    <li>
+                        <b>Software Development:</b> Custom software creation tailored to specific business processes or market
+                        demands.
+
+                    </li>
+                    <li>
+                        <b>Technical Support:</b> Assistance with software application management and troubleshooting.
+
+                    </li>
+                    <li>
+                       <b> Cybersecurity Services:</b> Protection against digital threats through monitoring and security
+                        measures.
+
+                    </li>
+                    <li>
+                       <b> Data Management and Analytics:</b> Services for data collection, processing, analysis, and
+                        visualization2.
+
+                    </li>
+
+                    <li>
+                        <b>Backup and Disaster Recovery:</b> Safeguarding data with regular backups and recovery solutions2.
+
+                    </li>
+                </ul>
+                <button class="close-btn" onclick="closeCard()">Close</button>
+            </div>
+
+
+            <div class="service">
+                <h2>Networking Services</h2>
+                <p>
+                    Network setup, monitoring, and management for reliable connectivity.
+                </p>
+                <button class="option" onclick="openCard('Option 1')">View More</button>
+            </div>
+
+
+
+            <div class="service">
+                <h2>Cloud Services</h2>
+                <p>
+                    Secure and scalable cloud services to boost your business
+                    efficiency.
+                </p>
+                <button class="option" onclick="openCard('Option 1')">View More</button>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="Contact">
+        <div class="container">
+            <div class="contact-form">
+                <h1>Contact Us</h1>
+                <form method="post">
+                    <input type="text" name="txtname" placeholder="Your Name" required />
+                    <input type="email" name="txtemail" placeholder="Your Email" required />
+                    <textarea name="txtmessage" rows="7" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="aboutus">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2 class="footer-heading">About Us</h2>
+                <p>
+                    ShahScape merges innovation and client focus with top-tier <br />
+                    tech to drive business excellence in a single, <br />
+                    accessible solution.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-subheading">Quick Links</h3>
+                <ul class="footer-links">
+                    <li>
+                        <i class="fa-solid fa-right-long"></i>&nbsp;&nbsp;<a href="#">Home</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-right-long"></i>&nbsp;&nbsp;<a href="#">Services</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-right-long"></i>&nbsp;&nbsp;<a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-right-long"></i>&nbsp;&nbsp;<a href="#">Help</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-subheading">Follow Us</h3>
+                <ul class="social-icons">
+                    <li>
+                        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2024 ShahScape. All rights reserved. &nbsp; Developed By :
+            Brijesh Shah.
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
 </body>
+
 </html>
